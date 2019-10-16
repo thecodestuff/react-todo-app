@@ -35,15 +35,21 @@ class App extends Component{
     }) 
   }
 
+  handleSubmit = character => {
+    this.setState({ characters: [...this.state.characters, character] })
+  }
+
   render(){ 
     const { characters } = this.state
     return (
       <div className="container">
-        <div className="form-wrapper">
-          <Form />
-        </div>
         <h1>Job list</h1>
         <Table characterData={ characters } removeCharacter={ this.removeCharacter }/>
+       
+        <div className="form-wrapper">
+          <Form handleSubmit={this.handleSubmit}/>
+        </div>
+
       </div>
     )
   }
