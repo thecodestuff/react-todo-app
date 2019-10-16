@@ -25,7 +25,13 @@ class App extends Component{
     }
 
   removeCharacter = index => {
-    alert("hello moto")
+    const {characters} = this.state
+
+    this.setState({
+      characters: characters.filter( (character, i) => {
+         return i !== index
+      } )
+    })
   }
 
   render(){ 
