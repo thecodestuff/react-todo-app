@@ -3,25 +3,28 @@ import Table from './Table.js'
 
 class App extends Component{
   render(){
-    const characters = [
-      {
-        name: 'Charlie',
-        job: 'janitor',
-      },
-      {
-        name: 'Macloard',
-        job: 'Bouncer',
-      },
-      {
-        name: 'Davi johns',
-        job: 'Aspring actress',
-      },
-      {
-        name: 'Dennis',
-        job: 'Bartender',
-      },
+    state = {
+      character: [
+        {
+          name: 'Charlie',
+          job: 'janitor',
+        },
+        {
+          name: 'Macloard',
+          job: 'Bouncer',
+        },
+        {
+          name: 'Davi johns',
+          job: 'Aspring actress',
+        },
+        {
+          name: 'Dennis',
+          job: 'Bartender',
+        },
     ]
-    
+
+    }
+        
     return (
       <div className="container">
         <h1>Job list</h1>
